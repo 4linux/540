@@ -1,0 +1,10 @@
+<ul id="imenu">
+	<li><a href="index.php" title="Home"><img src="menu/home.png" /></a></li>
+	<li><a href="clientes.php" title="Clientes"><img src="menu/empresas.png" /></a></li>
+	<li><a href="" title="Organograma"><img src="menu/stats.png" /></a></li>
+	<li><a href="" title="Empresas"><img src="menu/usuarios.png" /></a></li>
+	<li><a href="agenda.php" title="Agenda de Cursos"><img src="menu/agenda.png" /></a></li>
+	<li><a href="" title="Mural"><img src="menu/mural.png" /></a></li>
+	<li><a href="import.php" title="Importar"><img src="menu/importex.png" /></a></li>
+	<li><a href="opcoes.php" title="Configurações"><img src="menu/opcoes.png" /></a></li>
+</ul>

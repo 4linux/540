@@ -1,0 +1,9 @@
+127.0.0.1	localhost.localdomain		localhost
+200.100.50.100	balancer.dexter.com.br		balancer
+200.100.50.101	manager01.dexter.com.br		manager01
+200.100.50.102	manager02.dexter.com.br		manager02
+200.100.50.103	manager03.dexter.com.br		manager03
+200.100.50.104	worker01.dexter.com.br		worker01
+200.100.50.105	worker02.dexter.com.br		worker02
+200.100.50.106	dtr.dexter.com.br		dtr
+200.100.50.150	monitoring-server.dexter.com.br	monitoring-server gitlab.dexter.com.br

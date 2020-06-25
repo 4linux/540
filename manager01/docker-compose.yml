@@ -1,0 +1,21 @@
+version: '3'
+services:
+  dexter-webserver:
+    image: "instrutordocker/dexter-wordpress"
+    hostname: "dexter-webserver"
+    container_name: "dexter-webserver"
+    domainname: "dexter.com.br"
+    ports:
+      - "80:80"
+#    volumes:
+#      - "volume_nfs:/var/www/html"
+#    networks:
+#      dexterlan:
+#        ipv4_address: 172.20.0.150
+
+#volumes:
+#  volume_nfs:
+#    external: true
+#networks:
+#  dexterlan:
+#    external: true

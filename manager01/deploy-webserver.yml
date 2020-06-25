@@ -1,0 +1,29 @@
+version: '3'
+services:
+  dexter-webserver:
+    image: "instrutordocker/dexter-wordpress"
+    ports:
+      - "80:80"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      resources:
+        limits:
+          memory: 512M
+          cpus: '1.5'
+    volumes:
+      - "volume_nfs:/var/www/html"
+    networks:
+      - dexter-overlay
+
+volumes:
+  volume_nfs:
+    external: true
+networks:
+  dexter-overlay:
+    external: true
