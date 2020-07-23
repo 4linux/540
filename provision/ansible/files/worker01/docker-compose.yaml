@@ -1,0 +1,21 @@
+version: '3'
+services:
+ webserver:
+  image: "registry:5000/webserver-wordpress"
+  hostname: "webserver-4labs" 
+  container_name: "webserver-4labs" 
+  domainname: "4labs.example"
+  ports:
+   - "80:80"
+#  networks:
+#   4labs:
+#    ipv4_address: 172.20.0.150
+#  volumes:
+#   - "volume_nfs:/var/www/html"
+
+#volumes:
+# volume_nfs:
+#  external: true
+#networks:
+# 4labs:
+#  external: true

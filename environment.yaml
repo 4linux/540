@@ -1,0 +1,32 @@
+---
+- name: manager
+  box: 4linux/centos7
+  hostname: manager
+  ipaddress: 172.16.0.100
+  memory: 3072
+  cpus: 1
+  provision: provision/ansible/manager.yaml
+
+- name: worker01
+  box: 4linux/centos7
+  hostname: worker01
+  ipaddress: 172.16.0.101
+  memory: 1536
+  cpus: 1
+  provision: provision/ansible/worker01.yaml
+
+- name: worker02
+  box: 4linux/ubuntu16.04
+  hostname: worker02
+  ipaddress: 172.16.0.102
+  memory: 1536
+  cpus: 1
+  provision: provision/ansible/worker02.yaml
+
+- name: registry
+  box: 4linux/ubuntu16.04
+  hostname: registry
+  ipaddress: 172.16.0.103
+  memory: 1536
+  cpus: 1
+  provision: provision/ansible/registry.yaml

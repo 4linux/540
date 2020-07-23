@@ -1,0 +1,96 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: Garantindo /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        line: "{{ item }}"
+      with_items:
+        - 172.16.0.100 manager
+        - 172.16.0.101 worker01
+        - 172.16.0.102 worker02
+        - 172.16.0.103 registry
+
+    - name: Instalando pacotes de dependencias para o curso de Docker
+      apt:
+        name: ['unzip', 'wget', 'elinks', 'rsync']
+
+    - name: Adicionar usuário suporte
+      user:
+        name: suporte
+        shell: /bin/bash
+        password : $1$QbUARykG$p2nthVG8AkDvabKPHwboa1
+
+    - name: Criando o arquivo 98_4linux
+      copy:
+        src: files/98_4linux
+        dest: /etc/sudoers.d
+        mode: 0644
+
+    - name: Criando o arquivo docker-compose.yaml
+      copy:
+        src: files/registry/docker-compose.yaml
+        dest: /opt
+        mode: 0644
+
+    - name: Criando diretório storage
+      synchronize:
+        src: files/storage
+        dest: /home/suporte
+
+    - name: Definir permissão de acesso da HOME do usuário suporte
+      file:
+        path: /home/suporte
+        owner: suporte 
+        group: suporte 
+        state: directory
+        recurse: yes
+        mode: 0755
+
+    - name: Atualizando pacotes
+      become_method: sudo
+      become: true
+      shell: apt update
+
+    - name: Instalando o NFS Server
+      apt:
+        name: nfs-kernel-server
+
+    - name: Instalando o DNS Server
+      apt:
+        name: bind9
+
+    - name: Criando o arquivo named.conf.local
+      copy:
+        src: files/registry/named.conf.local
+        dest: /etc/bind
+        owner: root
+        group: bind
+        mode: 0644
+
+    - name: Criando o arquivo named.conf.options
+      copy:
+        src: files/registry/named.conf.options
+        dest: /etc/bind
+        owner: root
+        group: bind
+        mode: 0644
+
+    - name: Criando o arquivo 4labs.example
+      copy:
+        src: files/registry/4labs.example
+        dest: /etc/bind
+        owner: root
+        group: bind
+        mode: 0644
+
+    - name: Criando o arquivo 0.16.172.db
+      copy:
+        src: files/registry/0.16.172.db
+        dest: /etc/bind
+        owner: root
+        group: bind
+        mode: 0644

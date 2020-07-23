@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+  "webserver":
+    image: "registry:5000/webserver-wordpress"
+    ports:
+      - "8080:80"
+    deploy:
+      labels:
+        - webserver
+      mode: global
+#      replicas: 4
+      placement:
+        constraints: [node.role == worker]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+#      resources:
+#        limits:
+#          memory: 256M
+#          cpus: '0.2'
+#    volumes:
+#      - "volume_nfs:/var/www/html"
+#    networks:
+#      - traefik-net
+
+#volumes:
+#  volume_nfs:
+#    external: true
+#networks:
+#  web:
+#    external: true

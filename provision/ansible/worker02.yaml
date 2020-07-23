@@ -1,0 +1,45 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: Garantindo /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        line: "{{ item }}"
+      with_items:
+        - 172.16.0.100 manager
+        - 172.16.0.101 worker01
+        - 172.16.0.102 worker02
+        - 172.16.0.103 registry
+
+    - name: Instalando pacotes de dependencias para o curso de Docker
+      apt:
+        name: ['unzip', 'wget', 'elinks', 'rsync']
+
+    - name: Adicionar usuário suporte
+      user:
+        name: suporte
+        shell: /bin/bash
+        password : $1$QbUARykG$p2nthVG8AkDvabKPHwboa1
+
+    - name: Criando o arquivo 98_4linux
+      copy:
+        src: files/98_4linux
+        dest: /etc/sudoers.d
+        mode: 0644
+
+    - name: Criando diretório scripts
+      synchronize:
+        src: files/worker02/scripts
+        dest: /home/suporte
+
+    - name: Definir permissão de acesso da HOME do usuario suporte
+      file:
+        path: /home/suporte
+        owner: suporte 
+        group: suporte 
+        state: directory
+        recurse: yes
+        mode: 0755
