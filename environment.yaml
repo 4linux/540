@@ -27,6 +27,6 @@
   box: 4linux/ubuntu16.04
   hostname: registry
   ipaddress: 172.16.0.103
-  memory: 1536
+  memory: 1024
   cpus: 1
   provision: provision/ansible/registry.yaml
