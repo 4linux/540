@@ -13,7 +13,12 @@
         - 172.16.0.101 worker01
         - 172.16.0.102 worker02
         - 172.16.0.103 registry
-
+        
+    - name: Ajustando .bashrc do usuário vagrant
+      lineinfile:
+        path: /home/vagrant/.bashrc
+        line: 'sudo su - suporte'
+        
     - name: Instalando pacotes de dependencias para o curso de Docker
       yum:
         name: ['unzip', 'wget', 'elinks', 'rsync']
