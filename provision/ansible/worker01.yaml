@@ -32,13 +32,13 @@
     - name: Criando o arquivo 98_4linux
       copy:
         src: files/98_4linux
-        dest: /etc/sudoers.d	
+        dest: /etc/sudoers.d
         mode: 0644
 
     - name: Criando o arquivo docker-compose.yaml
       copy:
         src: files/worker01/docker-compose.yaml
-        dest: /opt	
+        dest: /opt
         mode: 0644
 
     - name: Criando diretório webserver
@@ -59,14 +59,14 @@
     - name: Definir permissão de acesso da HOME do usuario suporte
       file:
         path: /home/suporte
-        owner: suporte 
-        group: suporte 
+        owner: suporte
+        group: suporte
         state: directory
         recurse: yes
         mode: 0755
 
     - name: Alterando arquivo do SELinux
-      lineinfile: 
+      lineinfile:
           path: /etc/selinux/config
           regexp: '^SELINUX='
           line: 'SELINUX=disabled'
@@ -76,4 +76,3 @@
 
     - name: Parando FirewallD
       command: systemctl stop firewalld
-
