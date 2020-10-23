@@ -49,8 +49,8 @@
     - name: Definir permissão de acesso da HOME do usuário suporte
       file:
         path: /home/suporte
-        owner: suporte 
-        group: suporte 
+        owner: suporte
+        group: suporte
         state: directory
         recurse: yes
         mode: 0755
