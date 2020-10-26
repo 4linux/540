@@ -54,7 +54,7 @@
         group: suporte
         mode: '0755'
  
-     - name: Criando o arquivo authorized_keys
+    - name: Criando o arquivo authorized_keys
       copy:
         src: files/authorized_keys
         dest: /home/suporte/.ssh/authorized_keys
