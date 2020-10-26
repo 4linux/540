@@ -56,6 +56,30 @@
         src: files/worker01/scripts
         dest: /home/suporte
 
+    - name: Cria o diretório .ssh
+      file:
+        path: /home/suporte/.ssh
+        state: directory
+        owner: suporte
+        group: suporte
+        mode: '0755'
+        
+    - name: Criando o arquivo id_rsa
+      copy:
+        src: files/worker01_id_rsa
+        dest: /home/suporte/.ssh/id_rsa
+        owner: suporte
+        group: suporte
+        mode: 0600
+        
+    - name: Criando o arquivo id_rsa.pub
+      copy:
+        src: files/worker01_id_rsa.pub
+        dest: /home/suporte/.ssh/id_rsa.pub
+        owner: suporte
+        group: suporte
+        mode: 0644
+        
     - name: Definir permissão de acesso da HOME do usuario suporte
       file:
         path: /home/suporte
