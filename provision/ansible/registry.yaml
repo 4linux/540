@@ -46,6 +46,22 @@
         src: files/storage
         dest: /home/suporte
 
+    - name: Cria o diretório .ssh
+      file:
+        path: /home/suporte/.ssh
+        state: directory
+        owner: suporte
+        group: suporte
+        mode: '0755'
+ 
+     - name: Criando o arquivo authorized_keys
+      copy:
+        src: files/authorized_keys
+        dest: /home/suporte/.ssh/authorized_keys
+        owner: suporte
+        group: suporte
+        mode: 0644
+        
     - name: Definir permissão de acesso da HOME do usuário suporte
       file:
         path: /home/suporte
