@@ -33,7 +33,7 @@
       copy:
         src: files/98_4linux
         dest: /etc/sudoers.d
-        mode: 0644
+        mode: 0644       
 
     - name: Criando o arquivo docker-compose.yaml
       copy:
@@ -99,3 +99,10 @@
         owner: root
         group: bind
         mode: 0644
+
+    - name: Ajustando o servidor SSH
+      replace:
+        path: /etc/app.conf
+        regexp: 'PasswordAuthentication no'
+        replace: 'PasswordAuthentication yes'
+        backup: yes
