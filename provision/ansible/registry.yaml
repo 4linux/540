@@ -99,10 +99,3 @@
         owner: root
         group: bind
         mode: 0644
-
-    - name: Ajustando o servidor SSH
-      replace:
-        path: /etc/app.conf
-        regexp: 'PasswordAuthentication no'
-        replace: 'PasswordAuthentication yes'
-        backup: yes
