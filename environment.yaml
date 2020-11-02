@@ -1,6 +1,6 @@
 ---
 - name: manager
-  box: centos/7
+  box: trombik/ansible-centos-7.3-x86_64
   hostname: manager
   ipaddress: 172.16.0.100
   memory: 3072
@@ -8,7 +8,7 @@
   provision: provision/ansible/manager.yaml
 
 - name: worker01
-  box: centos/7
+  box: trombik/ansible-centos-7.3-x86_64
   hostname: worker01
   ipaddress: 172.16.0.101
   memory: 1536
@@ -16,7 +16,7 @@
   provision: provision/ansible/worker01.yaml
 
 - name: worker02
-  box: ubuntu/bionic64
+  box: trombik/ansible-ubuntu-18.04-amd64
   hostname: worker02
   ipaddress: 172.16.0.102
   memory: 1536
@@ -24,7 +24,7 @@
   provision: provision/ansible/worker02.yaml
 
 - name: registry
-  box: ubuntu/bionic64
+  box: trombik/ansible-ubuntu-18.04-amd64
   hostname: registry
   ipaddress: 172.16.0.103
   memory: 1024
