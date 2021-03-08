@@ -1,0 +1,6 @@
+services:
+  my-app:
+    ports:
+      - 3000:3000
+    volumes:
+      - ..:/app/my-app

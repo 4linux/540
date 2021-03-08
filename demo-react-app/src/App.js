@@ -8,6 +8,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          <br/>
+          Hello!!! My base URL is: {process.env.REACT_APP_BASE_URL}
         </p>
         <a
           className="App-link"
