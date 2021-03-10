@@ -1,0 +1,7 @@
+services:
+  my-app:
+    build:
+      target: prod
+    image: 4linux-lab:prod
+    ports:
+      - 80:5000

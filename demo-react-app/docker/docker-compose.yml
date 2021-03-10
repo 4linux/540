@@ -1,0 +1,7 @@
+services:
+  my-app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: base
+    image: 4linux-lab
