@@ -14,33 +14,6 @@
         - 172.16.0.102 worker02
         - 172.16.0.103 registry
         
-    - name: Ajustando .bashrc do usuário vagrant
-      lineinfile:
-        path: /home/vagrant/.bashrc
-        line: 'sudo su - suporte'
-        
-    - name: Instalando pacotes de dependencias para o curso de Docker
-      yum:
-        name: ['unzip', 'wget', 'elinks', 'rsync']
-
-    - name: Adicionar usuário suporte
-      user:
-        name: suporte
-        shell: /bin/bash
-        password : $1$QbUARykG$p2nthVG8AkDvabKPHwboa1
-
-    - name: Criando o arquivo 98_4linux
-      copy:
-        src: files/98_4linux
-        dest: /etc/sudoers.d
-        mode: 0644
-
-    - name: Criando o arquivo daemon.json
-      copy:
-        src: files/daemon.json
-        dest: /opt
-        mode: 0644
-
     - name: Criando o arquivo docker-compose.yaml
       copy:
         src: files/docker-compose.yaml
@@ -77,15 +50,3 @@
         state: directory
         recurse: yes
         mode: 0755
-     
-    - name: Alterando arquivo do SELinux
-      lineinfile:
-          path: /etc/selinux/config
-          regexp: '^SELINUX='
-          line: 'SELINUX=disabled'
-
-    - name: Desabilitando o Firewall
-      command: systemctl disable firewalld
-
-    - name: Parando FirewallD
-      command: systemctl stop firewalld

@@ -14,27 +14,6 @@
         - 172.16.0.102 worker02
         - 172.16.0.103 registry
         
-    - name: Ajustando .bashrc do usuário vagrant
-      lineinfile:
-        path: /home/vagrant/.bashrc
-        line: 'sudo su - suporte'
-        
-    - name: Instalando pacotes de dependencias para o curso de Docker
-      apt:
-        name: ['unzip', 'wget', 'elinks', 'rsync']
-
-    - name: Adicionar usuário suporte
-      user:
-        name: suporte
-        shell: /bin/bash
-        password : $1$QbUARykG$p2nthVG8AkDvabKPHwboa1
-
-    - name: Criando o arquivo 98_4linux
-      copy:
-        src: files/98_4linux
-        dest: /etc/sudoers.d
-        mode: 0644
-
     - name: Criando diretório scripts
       synchronize:
         src: files/worker02/scripts
