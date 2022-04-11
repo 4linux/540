@@ -14,10 +14,10 @@
         - 172.16.0.102 worker02
         - 172.16.0.103 registry
         
-    - name: Criando diretório scripts
-      synchronize:
-        src: files/worker02/scripts
-        dest: /home/suporte        
+#    - name: Criando diretório scripts
+#      synchronize:
+#        src: files/worker02/scripts
+#        dest: /home/suporte        
        
     - name: Definir permissão de acesso da HOME do usuario suporte
       file:
