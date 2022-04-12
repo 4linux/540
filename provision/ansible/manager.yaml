@@ -32,15 +32,15 @@
         owner: suporte
         group: suporte
 
-#    - name: Criando diretório webserver
-#      synchronize:
-#        src: files/webserver
-#        dest: /home/suporte
+    - name: Criando diretório webserver
+      synchronize:
+        src: files/webserver
+        dest: /home/suporte
 
-#    - name: Criando diretório storage
-#      synchronize:
-#        src: files/storage
-#        dest: /home/suporte
+    - name: Criando diretório storage
+      synchronize:
+        src: files/storage
+        dest: /home/suporte
 
     - name: Definir permissão de acesso da HOME do usuario suporte
       file:
