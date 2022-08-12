@@ -1,0 +1,19 @@
+version: '3'
+services:
+  webserver:
+    image: "php:7.2-apache"
+    hostname: "webserver"
+    container_name: "webserver"
+    domainname: "4labs.example"
+    ports:
+      - "80:80"
+#    networks:
+#      4labs:
+#        ipv4_address: 172.20.0.150    
+#    volumes:
+#    - type: bind
+#      source: /opt/site
+#      target: /var/www/html
+#networks:
+# 4labs:
+#  external: true        

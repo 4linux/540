@@ -1,0 +1,38 @@
+version: '3'
+services:
+  database:
+    image: "mysql:5.7"
+    environment:
+      MYSQL_ROOT_PASSWORD: "Abc123!1"
+      MYSQL_DATABASE: php
+      MYSQL_USER: php
+      MYSQL_PASSWORD: 4linux
+    ports:
+      - "3306:3306"
+    networks:
+      - 4labs
+    volumes:
+      - "mysql-data:/var/lib/mysql"
+  app-php:
+    image: "registry:5000/4linux-app:latest"
+    environment:
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_USER: php
+      DB_PASS: 4linux
+      DB_NAME: php
+    ports:
+      - "80:8080"
+    networks:
+      - 4labs
+    volumes:
+      - "app-data:/app"
+
+networks:
+  4labs:
+    external: true
+volumes:
+  mysql-data:
+    external: true
+  app-data:
+    external: true

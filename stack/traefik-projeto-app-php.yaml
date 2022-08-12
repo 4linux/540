@@ -1,0 +1,157 @@
+version: '3.9'
+
+services:
+
+  traefik:
+    image: "traefik:2.8"
+    command:
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --providers.docker=true
+      - --providers.docker.swarmMode=true
+      - --providers.docker.exposedbydefault=false
+      - --api.insecure=true
+      - --log.level=ERROR
+    ports:
+      - "8080:8080"
+      - "80:80"
+      - "443:443"
+    networks:
+      - weavenet
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+        
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    secrets:
+      - mysql_root_password
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: '/run/secrets/mysql_root_password'
+      MYSQL_DATABASE: php
+      MYSQL_USER: php
+    env_file: .env
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "3306:3306"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.labels.app == backend]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+    volumes:
+      - "mysql-data:/var/lib/mysql"
+    networks:
+      - "weavenet"
+
+  phpmyadmin:
+    image: "phpmyadmin"
+    environment:
+      PMA_ARBITRARY: "1"
+    ports:
+      - "8082:80"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+    networks:
+      - "weavenet"
+
+  memcached1:
+    image: "memcached"
+    ports:
+      - "31211:11211"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.labels.memcached1 == node1 ]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+    networks:
+      - "weavenet"
+
+  memcached2:
+    image: "memcached"
+    ports:
+      - "31212:11211"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.labels.memcached2 == node2 ]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+    networks:
+      - "weavenet"
+
+  app-php:
+    image: "registry:5000/4linux-app:latest"
+    configs:
+      - source: php_config
+        target: /etc/php7/php.ini
+    environment:
+      DB_HOST: IP_INTERNO_DOCKER_MANAGER
+      DB_PORT: 3306
+      DB_USER: php
+      DB_NAME: php
+    env_file: .env
+    deploy:
+      mode: replicated
+      replicas: 4
+      placement:
+        constraints: [node.labels.app == frontend]
+      labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app-php.rule=Host(`DOMINIO_NO_IP`)"
+      - "traefik.http.routers.app-php.entrypoints=web"
+      - "traefik.http.routers.app-php.service=app-php"
+      - "traefik.http.services.app-php.loadbalancer.server.port=8080"
+      - "traefik.docker.network=weavenet"        
+    ports:
+      - ":8080"
+    networks:
+      - "weavenet"
+    volumes:
+      - "app-data:/app"
+
+secrets:
+  mysql_root_password:
+    external: true
+
+configs:
+  php_config:
+    external: true
+
+networks:
+  weavenet:
+    external: true
+
+volumes:
+  mysql-data:
+    external: true
+  app-data:
+    external: true

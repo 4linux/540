@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  webserver:
+    image: nginx
+    ports:
+      - "8081:80"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
