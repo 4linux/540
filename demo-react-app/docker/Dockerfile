@@ -1,24 +1,33 @@
-FROM node:alpine3.12 as base
+FROM node:16-alpine3.16 as base
 
 WORKDIR /app/
 
+
+RUN yarn add react-scripts@4.0.3 react@17.0.1 react-dom@17.0.1
 RUN npx create-react-app my-app \
     && cd /app/my-app
 
 WORKDIR /app/my-app
 
-ENTRYPOINT ["/usr/local/bin/yarn"]
+COPY ./nginx.conf /nginx.conf
+
+ENTRYPOINT ["/usr/local/bin/npm"]
 
 CMD ["start"]
 
+FROM base as build
 
-FROM base as prod
+RUN yarn build 
 
-ADD . .
+FROM nginx:1.15 as prod
 
-RUN yarn add serve \
-   && yarn build
 
-ENTRYPOINT []  # Removendo o yarn como entrypoint
+COPY --from=build /app/my-app /usr/share/nginx/my-app
+COPY --from=build /nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD ["/app/my-app/node_modules/serve/bin/serve.js", "-s", "build"]
+EXPOSE 5000
+
+WORKDIR /usr/share/nginx/html
+
+
+CMD ["nginx", "-g", "daemon off;"]
