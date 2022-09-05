@@ -1,4 +1,4 @@
-FROM node:alpine3.12 as base
+FROM node:16-alpine3.16 as base
 
 WORKDIR /app/
 
@@ -9,21 +9,25 @@ RUN npx create-react-app my-app \
 
 WORKDIR /app/my-app
 
+COPY ./nginx.conf /nginx.conf
+
 ENTRYPOINT ["/usr/local/bin/npm"]
 
 CMD ["start"]
 
+FROM base as build
 
-FROM base as prod
+RUN yarn build 
 
-WORKDIR /app/my-app/
+FROM nginx:1.15 as prod
 
 
-COPY . .
+COPY --from=build /app/my-app /usr/share/nginx/my-app
+COPY --from=build /nginx.conf /etc/nginx/conf.d/default.conf
 
-RUN yarn add serve \
-   && yarn build
+EXPOSE 5000
 
-ENTRYPOINT []  # Removendo o yarn como entrypoint
+WORKDIR /usr/share/nginx/html
 
-CMD ["/app/my-app/node_modules/serve/bin/serve.js", "-s", "build"]
+
+CMD ["nginx", "-g", "daemon off;"]
