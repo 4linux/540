@@ -34,6 +34,16 @@
         recurse: yes
         mode: 0755
 
+    - name: remover /var/lib/apt/lists
+      shell: rm -rf /var/lib/apt/lists
+
+    - name: apt clean
+      shell: apt-get clean
+
+    - name: apt update
+      shell: apt-get update
+
+        
     - name: Instala os pacotes do NFS Server e DNS
       apt:
         name: "{{ packages }}"
