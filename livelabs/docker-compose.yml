@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  redis:
+    image: docker.io/bitnami/redis:7.0
+    environment:
+      - REDIS_PASSWORD=4linux
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - '6379:6379'
+    networks:
+      live-labs-local:
+        ipv4_address: 172.21.0.101
+    volumes:
+      - 'redis-data:/bitnami/redis/data'
+
+  perl-dancer:
+    image: <sua-conta-docker-hub>/dancer-perl:latest
+    environment:
+      REDIS_SERVER: "172.21.0.101"
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: "4linux"
+    ports:
+      - "8080:8080"
+    networks:
+      live-lab-local:
+        ipv4_address: 172.21.0.102
+    volumes:
+     - 'perl-data:/opt'
+
+networks:
+  live-lab-local:
+    external: true
+
+volumes:
+  redis-data:
+    external: true
+  python-data:
+    external: true 
