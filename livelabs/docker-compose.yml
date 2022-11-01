@@ -26,8 +26,8 @@ services:
       live-lab-local:
         ipv4_address: 172.21.0.102
     volumes:
-     - 'perl-data:/opt'
-
+     - 'perl-data:/opt/app-root/src'
+     
 networks:
   live-lab-local:
     external: true
@@ -35,5 +35,5 @@ networks:
 volumes:
   redis-data:
     external: true
-  python-data:
-    external: true 
+  perl-data:
+    external: true
