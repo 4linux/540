@@ -9,7 +9,7 @@ services:
     ports:
       - '6379:6379'
     networks:
-      live-labs-local:
+      live-lab-local:
         ipv4_address: 172.21.0.101
     volumes:
       - 'redis-data:/bitnami/redis/data'
