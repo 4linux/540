@@ -1,0 +1,14 @@
+/opt/app-root/src/extlib/lib/perl5/AppConfig.pm
+/opt/app-root/src/extlib/lib/perl5/AppConfig/Args.pm
+/opt/app-root/src/extlib/lib/perl5/AppConfig/CGI.pm
+/opt/app-root/src/extlib/lib/perl5/AppConfig/File.pm
+/opt/app-root/src/extlib/lib/perl5/AppConfig/Getopt.pm
+/opt/app-root/src/extlib/lib/perl5/AppConfig/State.pm
+/opt/app-root/src/extlib/lib/perl5/AppConfig/Sys.pm
+/opt/app-root/src/extlib/man/man3/AppConfig.3pm
+/opt/app-root/src/extlib/man/man3/AppConfig::Args.3pm
+/opt/app-root/src/extlib/man/man3/AppConfig::CGI.3pm
+/opt/app-root/src/extlib/man/man3/AppConfig::File.3pm
+/opt/app-root/src/extlib/man/man3/AppConfig::Getopt.3pm
+/opt/app-root/src/extlib/man/man3/AppConfig::State.3pm
+/opt/app-root/src/extlib/man/man3/AppConfig::Sys.3pm

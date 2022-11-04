@@ -1,0 +1,34 @@
+=======================================================================
+   This file contains a high-level summary of changes between recent
+   stable releases of Type-Tiny. For a more detailed list, including
+   changes in development releases, see the "Changes" file instead.
+=======================================================================
+
+2022-09-23 Type-Tiny version 2.000000 released!
+
+ - Improved API for `Type::Params`.
+ - New `Types::Common` module.
+ - `Type::Tie` which was a separate distribution, is now included.
+ - Dropped support for versions of Perl older than Perl 5.8.1.
+ - Uses `Exporter::Tiny 1.004` for lexical imports on Perl blead.
+ - `Type::Tiny` now has a `type_default` method.
+ - `Type::Tiny` now overloads the division (slash) operator.
+ - `%Error::TypeTiny::CarpInternal` is now an alias for `%Carp::CarpInternal`.
+ - Type::Tiny::{Class,Duck,Enum,Role} are now exporters.
+ - Enum types now export constants for each value.
+ - `Types::Common::String` now provides a `DelimitedStr` type.
+
+Test Suite Statistics:
+
+ - Type-Tiny-0.001:
+   > Files=31, Tests=657, 2 wallclock secs
+
+ - Type-Tiny-1.000000:
+   > Files=150, Tests=8316, 14 wallclock secs
+
+ - Type-Tiny-1.016000:
+   > Files=285, Tests=14294, 26 wallclock secs
+
+ - Type-Tiny-2.000000:
+   > Files=335, Tests=14890, 35 wallclock secs
+

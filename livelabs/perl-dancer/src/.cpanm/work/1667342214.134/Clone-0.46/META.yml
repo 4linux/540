@@ -1,0 +1,27 @@
+---
+abstract: 'recursively copy Perl datatypes'
+author:
+  - 'Ray Finch <rdf@cpan.org>'
+build_requires:
+  B::COW: '0.004'
+  ExtUtils::MakeMaker: '0'
+  Test::More: '0.88'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 7.64, CPAN::Meta::Converter version 2.150010'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Clone
+no_index:
+  directory:
+    - t
+    - inc
+resources:
+  bugtracker: https://github.com/garu/Clone/issues
+  license: http://dev.perl.org/licenses/
+  repository: http://github.com/garu/Clone
+version: '0.46'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.018'

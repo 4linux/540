@@ -1,0 +1,4 @@
+#!/opt/rh/rh-perl530/root/usr/bin/perl
+use lib 'lib';
+use Module::Build::Tiny;
+Build();

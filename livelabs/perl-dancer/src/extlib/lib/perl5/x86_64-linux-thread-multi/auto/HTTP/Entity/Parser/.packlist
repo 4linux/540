@@ -1,0 +1,10 @@
+/opt/app-root/src/extlib/lib/perl5/HTTP/Entity/Parser.pm
+/opt/app-root/src/extlib/lib/perl5/HTTP/Entity/Parser/JSON.pm
+/opt/app-root/src/extlib/lib/perl5/HTTP/Entity/Parser/MultiPart.pm
+/opt/app-root/src/extlib/lib/perl5/HTTP/Entity/Parser/OctetStream.pm
+/opt/app-root/src/extlib/lib/perl5/HTTP/Entity/Parser/UrlEncoded.pm
+/opt/app-root/src/extlib/man/man3/HTTP::Entity::Parser.3pm
+/opt/app-root/src/extlib/man/man3/HTTP::Entity::Parser::JSON.3pm
+/opt/app-root/src/extlib/man/man3/HTTP::Entity::Parser::MultiPart.3pm
+/opt/app-root/src/extlib/man/man3/HTTP::Entity::Parser::OctetStream.3pm
+/opt/app-root/src/extlib/man/man3/HTTP::Entity::Parser::UrlEncoded.3pm

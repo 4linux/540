@@ -1,0 +1,4 @@
+/opt/app-root/src/extlib/bin/use-devel-checklib
+/opt/app-root/src/extlib/lib/perl5/Devel/CheckLib.pm
+/opt/app-root/src/extlib/man/man1/use-devel-checklib.1
+/opt/app-root/src/extlib/man/man3/Devel::CheckLib.3pm

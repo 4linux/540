@@ -1,0 +1,4 @@
+/opt/app-root/src/extlib/lib/perl5/Devel/StackTrace.pm
+/opt/app-root/src/extlib/lib/perl5/Devel/StackTrace/Frame.pm
+/opt/app-root/src/extlib/man/man3/Devel::StackTrace.3pm
+/opt/app-root/src/extlib/man/man3/Devel::StackTrace::Frame.3pm

@@ -1,0 +1,1 @@
+{"provides":{"YAML::XS::LibYAML":{"file":"LibYAML/lib/YAML/XS/LibYAML.pm"},"YAML::LibYAML":{"file":"lib/YAML/LibYAML.pm","version":0.85},"YAML::XS":{"file":"lib/YAML/XS.pm","version":0.85}},"name":"YAML::LibYAML","dist":"YAML-LibYAML-0.85","target":"YAML::XS","version":0.85,"pathname":"I/IN/INGY/YAML-LibYAML-0.85.tar.gz"}

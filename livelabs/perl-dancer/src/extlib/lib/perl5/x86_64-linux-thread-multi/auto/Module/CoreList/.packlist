@@ -1,0 +1,7 @@
+/opt/app-root/src/extlib/bin/corelist
+/opt/app-root/src/extlib/lib/perl5/Module/CoreList.pm
+/opt/app-root/src/extlib/lib/perl5/Module/CoreList.pod
+/opt/app-root/src/extlib/lib/perl5/Module/CoreList/Utils.pm
+/opt/app-root/src/extlib/man/man1/corelist.1
+/opt/app-root/src/extlib/man/man3/Module::CoreList.3pm
+/opt/app-root/src/extlib/man/man3/Module::CoreList::Utils.3pm

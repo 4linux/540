@@ -1,0 +1,160 @@
+do{ my $x = [
+       {
+         'ARGV' => []
+       },
+       {},
+       {
+         'PL_files' => undef,
+         '_added_to_INC' => [
+                              'inc',
+                              '/opt/app-root/src/extlib/lib/perl5/5.30.1/x86_64-linux-thread-multi',
+                              '/opt/app-root/src/extlib/lib/perl5/5.30.1',
+                              '/opt/app-root/src/extlib/lib/perl5/x86_64-linux-thread-multi',
+                              '/opt/app-root/src/extlib/lib/perl5'
+                            ],
+         '_have_c_compiler' => 1,
+         'allow_mb_mismatch' => 0,
+         'allow_pureperl' => 1,
+         'auto_configure_requires' => 1,
+         'autosplit' => undef,
+         'base_dir' => '/opt/app-root/src/.cpanm/work/1667342214.134/Params-Validate-1.31',
+         'bindoc_dirs' => [
+                            'blib/script'
+                          ],
+         'blib' => 'blib',
+         'build_bat' => 0,
+         'build_class' => 'MyMBClass',
+         'build_elements' => [
+                               'PL',
+                               'support',
+                               'pm',
+                               'xs',
+                               'share_dir',
+                               'pod',
+                               'script'
+                             ],
+         'build_requires' => {
+                               'ExtUtils::CBuilder' => 0,
+                               'Module::Build' => '0.4227'
+                             },
+         'build_script' => 'Build',
+         'bundle_inc' => [],
+         'bundle_inc_preload' => [],
+         'c_source' => 'c',
+         'config' => undef,
+         'config_dir' => '_build',
+         'configure_requires' => {
+                                   'Module::Build' => '0.4227'
+                                 },
+         'conflicts' => {},
+         'cover' => undef,
+         'cpan_client' => 'cpan',
+         'create_license' => undef,
+         'create_makefile_pl' => undef,
+         'create_packlist' => 1,
+         'create_readme' => undef,
+         'debug' => undef,
+         'debugger' => undef,
+         'destdir' => undef,
+         'dist_abstract' => 'Validate method/function parameters',
+         'dist_author' => [
+                            'Dave Rolsky <autarch@urth.org>',
+                            'Ilya Martynov <ilya@martynov.org>'
+                          ],
+         'dist_name' => 'Params-Validate',
+         'dist_suffix' => undef,
+         'dist_version' => '1.31',
+         'dist_version_from' => undef,
+         'dynamic_config' => 1,
+         'extra_compiler_flags' => [],
+         'extra_linker_flags' => [],
+         'extra_manify_args' => undef,
+         'get_options' => {
+                            'pp' => {}
+                          },
+         'has_config_data' => undef,
+         'html_css' => '',
+         'include_dirs' => [],
+         'install_base' => '/opt/app-root/src/extlib',
+         'install_base_relpaths' => {},
+         'install_path' => {},
+         'install_sets' => {},
+         'installdirs' => 'site',
+         'libdoc_dirs' => [
+                            'blib/lib',
+                            'blib/arch'
+                          ],
+         'license' => 'artistic_2',
+         'magic_number' => undef,
+         'mb_version' => '0.4229',
+         'meta_add' => {},
+         'meta_merge' => {},
+         'metafile' => 'META.yml',
+         'metafile2' => 'META.json',
+         'module_name' => 'Params::Validate',
+         'mymetafile' => 'MYMETA.yml',
+         'mymetafile2' => 'MYMETA.json',
+         'needs_compiler' => 1,
+         'orig_dir' => '/opt/app-root/src/.cpanm/work/1667342214.134/Params-Validate-1.31',
+         'original_prefix' => {},
+         'perl' => '/opt/rh/rh-perl530/root/usr/bin/perl',
+         'pm_files' => undef,
+         'pod_files' => undef,
+         'pollute' => undef,
+         'prefix' => undef,
+         'prefix_relpaths' => {},
+         'prereq_action_types' => [
+                                    'requires',
+                                    'build_requires',
+                                    'test_requires',
+                                    'conflicts',
+                                    'recommends'
+                                  ],
+         'program_name' => undef,
+         'pureperl_only' => 0,
+         'quiet' => undef,
+         'recommends' => {},
+         'recurse_into' => [],
+         'recursive_test_files' => 1,
+         'release_status' => 'stable',
+         'requires' => {
+                         'Carp' => 0,
+                         'Exporter' => 0,
+                         'Module::Implementation' => 0,
+                         'Scalar::Util' => '1.10',
+                         'XSLoader' => 0,
+                         'perl' => '5.008001',
+                         'strict' => 0,
+                         'vars' => 0,
+                         'warnings' => 0
+                       },
+         'script_files' => undef,
+         'scripts' => undef,
+         'share_dir' => undef,
+         'sign' => undef,
+         'tap_harness_args' => {},
+         'test_file_exts' => [
+                               '.t'
+                             ],
+         'test_files' => undef,
+         'test_requires' => {
+                              'Devel::Peek' => 0,
+                              'ExtUtils::MakeMaker' => 0,
+                              'File::Spec' => 0,
+                              'File::Temp' => 0,
+                              'Test::Fatal' => 0,
+                              'Test::More' => '0.96',
+                              'Test::Requires' => 0,
+                              'Tie::Array' => 0,
+                              'Tie::Hash' => 0,
+                              'base' => 0,
+                              'lib' => 0,
+                              'overload' => 0
+                            },
+         'use_rcfile' => 1,
+         'use_tap_harness' => 0,
+         'verbose' => undef,
+         'xs_files' => undef
+       }
+     ];
+$x; }

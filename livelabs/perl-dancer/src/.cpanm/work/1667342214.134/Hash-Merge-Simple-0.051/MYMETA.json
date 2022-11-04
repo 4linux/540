@@ -1,0 +1,37 @@
+{
+   "abstract" : "Recursively merge two or more hashes, simply",
+   "author" : [
+      "Robert Krimen <robertkrimen@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.102345, CPAN::Meta::Converter version 2.102400, CPAN::Meta::Converter version 2.150010",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "Hash-Merge-Simple",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::Most" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Clone" : "0",
+            "Storable" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "version" : "0.051",
+   "x_serialization_backend" : "JSON::PP version 4.04"
+}

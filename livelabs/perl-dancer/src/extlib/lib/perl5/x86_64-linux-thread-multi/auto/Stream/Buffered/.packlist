@@ -1,0 +1,5 @@
+/opt/app-root/src/extlib/lib/perl5/Stream/Buffered.pm
+/opt/app-root/src/extlib/lib/perl5/Stream/Buffered/Auto.pm
+/opt/app-root/src/extlib/lib/perl5/Stream/Buffered/File.pm
+/opt/app-root/src/extlib/lib/perl5/Stream/Buffered/PerlIO.pm
+/opt/app-root/src/extlib/man/man3/Stream::Buffered.3pm

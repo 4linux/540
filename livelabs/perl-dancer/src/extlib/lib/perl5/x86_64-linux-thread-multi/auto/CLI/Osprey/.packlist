@@ -1,0 +1,10 @@
+/opt/app-root/src/extlib/lib/perl5/CLI/Osprey.pm
+/opt/app-root/src/extlib/lib/perl5/CLI/Osprey/Descriptive.pm
+/opt/app-root/src/extlib/lib/perl5/CLI/Osprey/Descriptive/Usage.pm
+/opt/app-root/src/extlib/lib/perl5/CLI/Osprey/InlineSubcommand.pm
+/opt/app-root/src/extlib/lib/perl5/CLI/Osprey/Role.pm
+/opt/app-root/src/extlib/man/man3/CLI::Osprey.3pm
+/opt/app-root/src/extlib/man/man3/CLI::Osprey::Descriptive.3pm
+/opt/app-root/src/extlib/man/man3/CLI::Osprey::Descriptive::Usage.3pm
+/opt/app-root/src/extlib/man/man3/CLI::Osprey::InlineSubcommand.3pm
+/opt/app-root/src/extlib/man/man3/CLI::Osprey::Role.3pm

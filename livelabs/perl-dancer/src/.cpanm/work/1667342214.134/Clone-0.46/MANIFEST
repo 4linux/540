@@ -1,0 +1,22 @@
+Changes
+Clone.pm
+Clone.xs
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+ppport.h
+README.md
+t/01array.t
+t/02hash.t
+t/03scalar.t
+t/04tie.t
+t/05dtype.t
+t/06refcnt.t
+t/07magic.t
+t/08fieldhash.t
+t/cow.t
+t/dclone.t
+t/dump.pl
+t/tied.pl
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

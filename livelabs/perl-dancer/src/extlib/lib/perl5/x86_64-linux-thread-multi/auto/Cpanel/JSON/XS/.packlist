@@ -1,0 +1,9 @@
+/opt/app-root/src/extlib/bin/cpanel_json_xs
+/opt/app-root/src/extlib/lib/perl5/x86_64-linux-thread-multi/Cpanel/JSON/XS.pm
+/opt/app-root/src/extlib/lib/perl5/x86_64-linux-thread-multi/Cpanel/JSON/XS/Boolean.pm
+/opt/app-root/src/extlib/lib/perl5/x86_64-linux-thread-multi/Cpanel/JSON/XS/Type.pm
+/opt/app-root/src/extlib/lib/perl5/x86_64-linux-thread-multi/auto/Cpanel/JSON/XS/XS.so
+/opt/app-root/src/extlib/man/man1/cpanel_json_xs.1
+/opt/app-root/src/extlib/man/man3/Cpanel::JSON::XS.3pm
+/opt/app-root/src/extlib/man/man3/Cpanel::JSON::XS::Boolean.3pm
+/opt/app-root/src/extlib/man/man3/Cpanel::JSON::XS::Type.3pm

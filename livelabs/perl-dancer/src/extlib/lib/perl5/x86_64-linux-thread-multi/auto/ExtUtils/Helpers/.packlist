@@ -1,0 +1,8 @@
+/opt/app-root/src/extlib/lib/perl5/ExtUtils/Helpers.pm
+/opt/app-root/src/extlib/lib/perl5/ExtUtils/Helpers/Unix.pm
+/opt/app-root/src/extlib/lib/perl5/ExtUtils/Helpers/VMS.pm
+/opt/app-root/src/extlib/lib/perl5/ExtUtils/Helpers/Windows.pm
+/opt/app-root/src/extlib/man/man3/ExtUtils::Helpers.3pm
+/opt/app-root/src/extlib/man/man3/ExtUtils::Helpers::Unix.3pm
+/opt/app-root/src/extlib/man/man3/ExtUtils::Helpers::VMS.3pm
+/opt/app-root/src/extlib/man/man3/ExtUtils::Helpers::Windows.3pm

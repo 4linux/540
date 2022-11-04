@@ -1,0 +1,34 @@
+do{ my $x = {
+       'build_requires' => {
+                             'ExtUtils::CBuilder' => 0,
+                             'Module::Build' => '0.4227'
+                           },
+       'conflicts' => {},
+       'recommends' => {},
+       'requires' => {
+                       'Carp' => 0,
+                       'Exporter' => 0,
+                       'Module::Implementation' => 0,
+                       'Scalar::Util' => '1.10',
+                       'XSLoader' => 0,
+                       'perl' => '5.008001',
+                       'strict' => 0,
+                       'vars' => 0,
+                       'warnings' => 0
+                     },
+       'test_requires' => {
+                            'Devel::Peek' => 0,
+                            'ExtUtils::MakeMaker' => 0,
+                            'File::Spec' => 0,
+                            'File::Temp' => 0,
+                            'Test::Fatal' => 0,
+                            'Test::More' => '0.96',
+                            'Test::Requires' => 0,
+                            'Tie::Array' => 0,
+                            'Tie::Hash' => 0,
+                            'base' => 0,
+                            'lib' => 0,
+                            'overload' => 0
+                          }
+     };
+$x; }

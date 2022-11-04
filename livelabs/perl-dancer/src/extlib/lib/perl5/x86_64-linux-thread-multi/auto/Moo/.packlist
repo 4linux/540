@@ -1,0 +1,16 @@
+/opt/app-root/src/extlib/lib/perl5/Method/Generate/Accessor.pm
+/opt/app-root/src/extlib/lib/perl5/Method/Generate/BuildAll.pm
+/opt/app-root/src/extlib/lib/perl5/Method/Generate/Constructor.pm
+/opt/app-root/src/extlib/lib/perl5/Method/Generate/DemolishAll.pm
+/opt/app-root/src/extlib/lib/perl5/Moo.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/HandleMoose.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/HandleMoose/FakeMetaClass.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/HandleMoose/_TypeMap.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/Object.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/Role.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/_Utils.pm
+/opt/app-root/src/extlib/lib/perl5/Moo/sification.pm
+/opt/app-root/src/extlib/lib/perl5/oo.pm
+/opt/app-root/src/extlib/man/man3/Moo.3pm
+/opt/app-root/src/extlib/man/man3/Moo::Role.3pm
+/opt/app-root/src/extlib/man/man3/oo.3pm

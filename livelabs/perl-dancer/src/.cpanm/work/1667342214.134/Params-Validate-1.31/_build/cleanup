@@ -1,0 +1,8 @@
+do{ my $x = {
+       'blib' => 1,
+       'blib/arch/auto/Params/Validate/XS/XS.bs' => 1,
+       'blib/arch/auto/Params/Validate/XS/XS.so' => 1,
+       'lib/Params/Validate/XS.c' => 1,
+       'lib/Params/Validate/XS.o' => 1
+     };
+$x; }

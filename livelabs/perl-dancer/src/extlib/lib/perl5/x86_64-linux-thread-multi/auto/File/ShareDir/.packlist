@@ -1,0 +1,5 @@
+/opt/app-root/src/extlib/lib/perl5/File/ShareDir.pm
+/opt/app-root/src/extlib/lib/perl5/auto/share/dist/File-ShareDir/sample.txt
+/opt/app-root/src/extlib/lib/perl5/auto/share/dist/File-ShareDir/subdir/sample.txt
+/opt/app-root/src/extlib/lib/perl5/auto/share/module/File-ShareDir/test_file.txt
+/opt/app-root/src/extlib/man/man3/File::ShareDir.3pm

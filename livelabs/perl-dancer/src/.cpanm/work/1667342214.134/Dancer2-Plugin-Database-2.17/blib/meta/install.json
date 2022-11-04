@@ -1,0 +1,1 @@
+{"version":2.17,"pathname":"B/BI/BIGPRESH/Dancer2-Plugin-Database-2.17.tar.gz","dist":"Dancer2-Plugin-Database-2.17","provides":{"Dancer2::Plugin::Database":{"version":2.17,"file":"lib/Dancer2/Plugin/Database.pm"}},"name":"Dancer2::Plugin::Database","target":"Dancer2::Plugin::Database"}

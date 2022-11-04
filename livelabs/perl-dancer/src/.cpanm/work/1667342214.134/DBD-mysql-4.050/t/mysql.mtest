@@ -1,0 +1,29 @@
+{ local $opt = {
+         'testpassword' => '',
+         'nocatchstderr' => 0,
+         'testdb' => 'test',
+         'testuser' => '',
+         'testsocket' => '',
+         'cflags' => '-I/usr/include/mysql',
+         'ldflags' => '',
+         'testport' => '',
+         'embedded' => '',
+         'mysql_config' => 'mysql_config',
+         'nossl' => 0,
+         'nofoundrows' => 0,
+         'libs' => '-L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -ldl -lssl -lcrypto',
+         'testhost' => ''
+       };
+$::test_host = $opt->{'testhost'};
+$::test_port = $opt->{'testport'};
+$::test_user = $opt->{'testuser'};
+$::test_socket = $opt->{'testsocket'};
+$::test_password = $opt->{'testpassword'};
+$::test_db = $opt->{'testdb'};
+$::test_dsn = "DBI:mysql:$::test_db";
+$::test_dsn .= ";mysql_socket=$::test_socket" if $::test_socket;
+$::test_dsn .= ":$::test_host" if $::test_host;
+$::test_dsn .= ":$::test_port" if $::test_port;
+$::test_force_embedded = $opt->{'force-embedded'} if $opt->{'force-embedded'};
+$::test_mysql_config = $opt->{'mysql_config'};
+} 1;

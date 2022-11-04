@@ -1,0 +1,1430 @@
+=head2 Tue Nov  1 22:36:54 2022: C<Module> L<Module::CoreList|Module::CoreList>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 5.20221020>
+
+=item *
+
+C<EXE_FILES: corelist>
+
+=back
+
+=head2 Tue Nov  1 22:36:56 2022: C<Module> L<Date::Parse|Date::Parse>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.33>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:36:57 2022: C<Module> L<HTTP::Date|HTTP::Date>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 6.05>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:36:58 2022: C<Module> L<LWP::MediaTypes|LWP::MediaTypes>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 6.04>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:36:59 2022: C<Module> L<IO::HTML|IO::HTML>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:00 2022: C<Module> L<Clone|Clone>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.46>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:01 2022: C<Module> L<HTTP::Message|HTTP::Message>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 6.44>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:02 2022: C<Module> L<File::ShareDir::Install|File::ShareDir::Install>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.14>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:03 2022: C<Module> L<Stream::Buffered|Stream::Buffered>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.03>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:04 2022: C<Module> L<Hash::MultiValue|Hash::MultiValue>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.16>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:05 2022: C<Module> L<ExtUtils::Config|ExtUtils::Config>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.008>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:06 2022: C<Module> L<ExtUtils::InstallPaths|ExtUtils::InstallPaths>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.012>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:07 2022: C<Module> L<ExtUtils::Helpers|ExtUtils::Helpers>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.026>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:09 2022: C<Module> L<Devel::StackTrace|Devel::StackTrace>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.04>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:10 2022: C<Module> L<Devel::StackTrace::AsHTML|Devel::StackTrace::AsHTML>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.15>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:11 2022: C<Module> L<Try::Tiny|Try::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.31>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:12 2022: C<Module> L<Class::Inspector|Class::Inspector>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.36>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:13 2022: C<Module> L<File::ShareDir|File::ShareDir>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.118>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:14 2022: C<Module> L<Filesys::Notify::Simple|Filesys::Notify::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.14>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:17 2022: C<Module> L<Test::SharedFork|Test::SharedFork>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.35>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:17 2022: C<Module> L<Test::TCP|Test::TCP>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.22>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:23 2022: C<Module> L<Cpanel::JSON::XS|Cpanel::JSON::XS>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 4.32>
+
+=item *
+
+C<EXE_FILES: bin/cpanel_json_xs>
+
+=back
+
+=head2 Tue Nov  1 22:37:23 2022: C<Module> L<JSON::MaybeXS|JSON::MaybeXS>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.004004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:25 2022: C<Module> L<Test::Deep|Test::Deep>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.130>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:26 2022: C<Module> L<HTTP::MultiPartParser|HTTP::MultiPartParser>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.02>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:28 2022: C<Module> L<Plack|Plack>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.0050>
+
+=item *
+
+C<EXE_FILES: script/plackup>
+
+=back
+
+=head2 Tue Nov  1 22:37:34 2022: C<Module> L<YAML::LibYAML|YAML::LibYAML>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.85>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:36 2022: C<Module> L<HTML::Tagset|HTML::Tagset>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.20>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:38 2022: C<Module> L<HTML::Parser|HTML::Parser>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.80>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:38 2022: C<Module> L<Plack::Middleware::FixMissingBodyInRedirect|Plack::Middleware::FixMissingBodyInRedirect>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.12>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:40 2022: C<Module> L<Role::Tiny|Role::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.002004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:41 2022: C<Module> L<Class::Method::Modifiers|Class::Method::Modifiers>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.13>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:42 2022: C<Module> L<Sub::Quote|Sub::Quote>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.006006>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:42 2022: C<Module> L<Moo|Moo>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.005004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:44 2022: C<Module> L<Exporter::Tiny|Exporter::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.004004>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:46 2022: C<Module> L<Type::Tiny|Type::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.000001>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:47 2022: C<Module> L<AppConfig|AppConfig>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.71>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:50 2022: C<Module> L<Template|Template>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 3.101>
+
+=item *
+
+C<EXE_FILES: bin/tpage bin/ttree>
+
+=back
+
+=head2 Tue Nov  1 22:37:53 2022: C<Module> L<Ref::Util::XS|Ref::Util::XS>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.117>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:53 2022: C<Module> L<Ref::Util|Ref::Util>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.204>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:55 2022: C<Module> L<File::Share|File::Share>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.27>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:57 2022: C<Module> L<Class::Data::Inheritable|Class::Data::Inheritable>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.09>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:57 2022: C<Module> L<Exception::Class|Exception::Class>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.45>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:59 2022: C<Module> L<Sub::Uplevel|Sub::Uplevel>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.2800>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:37:59 2022: C<Module> L<Test::Exception|Test::Exception>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.43>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:01 2022: C<Module> L<Capture::Tiny|Capture::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.48>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:01 2022: C<Module> L<Test::Differences|Test::Differences>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.69>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:02 2022: C<Module> L<Test::Warn|Test::Warn>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.37>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:03 2022: C<Module> L<Test::Most|Test::Most>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.38>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:03 2022: C<Module> L<Hash::Merge::Simple|Hash::Merge::Simple>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.051>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:05 2022: C<Module> L<Module::Pluggable|Module::Pluggable>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 5.2>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:05 2022: C<Module> L<Config::Any|Config::Any>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.32>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:06 2022: C<Module> L<Plack::Middleware::RemoveRedundantBody|Plack::Middleware::RemoveRedundantBody>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.09>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:07 2022: C<Module> L<Path::Tiny|Path::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.130>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:09 2022: C<Module> L<Import::Into|Import::Into>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.002005>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:11 2022: C<Module> L<Module::Implementation|Module::Implementation>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.09>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:13 2022: C<Module> L<Getopt::Long::Descriptive|Getopt::Long::Descriptive>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.110>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:15 2022: C<Module> L<Safe::Isa|Safe::Isa>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.000010>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:16 2022: C<Module> L<Template::Tiny|Template::Tiny>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.14>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:18 2022: C<Module> L<Dancer2|Dancer2>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.400000>
+
+=item *
+
+C<EXE_FILES: script/dancer2>
+
+=back
+
+=head2 Tue Nov  1 22:38:25 2022: C<Module> L<DBI|DBI>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.643>
+
+=item *
+
+C<EXE_FILES: dbilogstrip dbiprof dbiproxy>
+
+=back
+
+=head2 Tue Nov  1 22:38:26 2022: C<Module> L<Devel::CheckLib|Devel::CheckLib>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.16>
+
+=item *
+
+C<EXE_FILES: bin/use-devel-checklib>
+
+=back
+
+=head2 Tue Nov  1 22:38:32 2022: C<Module> L<DBD::mysql|DBD::mysql>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 4.050>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:34 2022: C<Module> L<Dancer::Plugin::Database::Core|Dancer::Plugin::Database::Core>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.20>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Tue Nov  1 22:38:34 2022: C<Module> L<Dancer2::Plugin::Database|Dancer2::Plugin::Database>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/app-root/src/extlib/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.17>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
