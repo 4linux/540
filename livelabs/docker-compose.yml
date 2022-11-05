@@ -15,7 +15,7 @@ services:
       - 'redis-data:/bitnami/redis/data'
 
   perl-dancer:
-    image: <sua-conta-docker-hub>/dancer-perl:latest
+    image: <sua-conta-docker-hub>/perl-dancer:latest
     environment:
       REDIS_SERVER: "172.21.0.101"
       REDIS_PORT: "6379"
@@ -26,7 +26,7 @@ services:
       live-lab-local:
         ipv4_address: 172.21.0.102
     volumes:
-     - 'perl-data:/opt/app-root/src'
+     - 'perl-data:/opt/app-root'
      
 networks:
   live-lab-local:
