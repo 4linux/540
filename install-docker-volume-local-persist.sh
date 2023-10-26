@@ -2,7 +2,8 @@
 # Configura ambiente do Golang
 export GOPATH="${HOME}/src/go"
 export PATH="${GOPATH}/bin:${PATH}"
-sudo apt-get install golang golang-glide -y
+sudo apt update
+sudo apt get install golang golang-glide make -y
 mkdir -p ${GOPATH}/bin
 
 # Compila o plugin
