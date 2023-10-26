@@ -3,7 +3,7 @@
 export GOPATH="${HOME}/src/go"
 export PATH="${GOPATH}/bin:${PATH}"
 sudo apt update
-sudo apt get install golang golang-glide make -y
+sudo apt install golang golang-glide make -y
 mkdir -p ${GOPATH}/bin
 
 # Compila o plugin
