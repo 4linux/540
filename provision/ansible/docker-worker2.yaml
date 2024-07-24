@@ -9,14 +9,14 @@
         path: /etc/hosts
         line: "{{ item }}"
       with_items:
-        - 172.16.0.100 manager
-        - 172.16.0.101 worker01
-        - 172.16.0.102 worker02
-        - 172.16.0.103 registry
+        - 172.16.0.100 docker-manager
+        - 172.16.0.101 docker-worker1
+        - 172.16.0.102 docker-worker2
+        - 172.16.0.103 docker-registry registry
         
 #    - name: Criando diretório scripts
 #      synchronize:
-#        src: files/worker02/scripts
+#        src: files/docker-worker2/scripts
 #        dest: /home/suporte        
        
     - name: Definir permissão de acesso da HOME do usuario suporte

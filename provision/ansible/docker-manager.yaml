@@ -9,16 +9,28 @@
         path: /etc/hosts
         line: "{{ item }}"
       with_items:
-        - 172.16.0.100 manager
-        - 172.16.0.101 worker01
-        - 172.16.0.102 worker02
-        - 172.16.0.103 registry
+        - 172.16.0.100 docker-manager
+        - 172.16.0.101 docker-worker1
+        - 172.16.0.102 docker-worker2
+        - 172.16.0.103 docker-registry registry
         
     - name: Criando o arquivo docker-compose.yaml
       copy:
-        src: files/worker01/docker-compose.yaml
+        src: files/docker-compose.yaml
         dest: /opt
         mode: 0644
+
+    - name: Criando o arquivo webserver-deploy.yaml
+      copy:
+        src: files/webserver-deploy.yaml
+        dest: /opt
+        mode: 0644
+
+    - name: Definir permissão de acesso ao arquivo webserver-deploy.yaml
+      file:
+        path: /opt/webserver-deploy.yaml
+        owner: suporte
+        group: suporte
 
     - name: Criando diretório webserver
       synchronize:
@@ -30,11 +42,6 @@
         src: files/storage
         dest: /home/suporte
 
-    - name: Criando diretório scripts
-      synchronize:
-        src: files/worker01/scripts
-        dest: /home/suporte
-       
     - name: Definir permissão de acesso da HOME do usuario suporte
       file:
         path: /home/suporte
