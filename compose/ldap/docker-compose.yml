@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   openldap:
     restart: always
