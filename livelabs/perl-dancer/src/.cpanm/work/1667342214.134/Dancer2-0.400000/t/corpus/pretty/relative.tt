@@ -1,3 +1,0 @@
-Template [% component.name %]
-
-[% INCLUDE 505.tt %]

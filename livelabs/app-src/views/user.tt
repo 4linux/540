@@ -1,3 +1,0 @@
-[% FOREACH id IN data.keys.nsort %]
-  [% data.$id.id %]:[% data.$id.name %]:[% data.$id.email %]
-[% END %]
