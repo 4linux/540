@@ -7,7 +7,7 @@ vms = {
   'docker-manager' => {'memory' => '3072', 'cpus' => 1, 'ip' => '100', 'box' => 'devopsbox/ubuntu-20.04', 'provision' => 'provision/ansible/docker-manager.yaml'},
   'docker-worker1' => {'memory' => '1536', 'cpus' => 1, 'ip' => '101', 'box' => 'devopsbox/ubuntu-20.04','provision' => 'provision/ansible/docker-worker1.yaml'},
   'docker-worker2' => {'memory' => '1536', 'cpus' => 1, 'ip' => '102', 'box' => 'devopsbox/ubuntu-20.04', 'provision' => 'provision/ansible/docker-worker2.yaml'},
-  'docker-registry' => {'memory' => '1536', 'cpus' => 1, 'ip' => '103', 'box' => 'devopsbox/centos-8.5-ansible-2.9', 'provision' => 'provision/ansible/docker-registry.yaml'}
+  'docker-registry' => {'memory' => '1536', 'cpus' => 1, 'ip' => '103', 'box' => 'devopsbox/ubuntu-20.04', 'provision' => 'provision/ansible/docker-registry.yaml'}
 }
 
 Vagrant.configure('2') do |config|
