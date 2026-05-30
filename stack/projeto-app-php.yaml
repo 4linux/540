@@ -12,9 +12,6 @@ services:
       MYSQL_DATABASE: php
       MYSQL_USER: php
     env_file: .env
-    deploy:
-      mode: replicated
-      replicas: 1
     ports:
       - "3306:3306"
     deploy:

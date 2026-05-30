@@ -1,0 +1,9 @@
+services:
+  jvm-app:
+    image: tomcat:9-jdk17
+    container_name: jvm-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./jvm-app.war:/usr/local/tomcat/webapps/ROOT.war
+    tty: true

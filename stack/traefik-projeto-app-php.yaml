@@ -28,7 +28,7 @@ services:
         delay: 10s
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-        
+
   database:
     image: mysql:5.7
     command: --default-authentication-plugin=mysql_native_password
@@ -38,10 +38,7 @@ services:
       MYSQL_ROOT_PASSWORD_FILE: '/run/secrets/mysql_root_password'
       MYSQL_DATABASE: php
       MYSQL_USER: php
-    env_file: .env
-    deploy:
-      mode: replicated
-      replicas: 1
+    env_file: .env  
     ports:
       - "3306:3306"
     deploy:
@@ -130,7 +127,7 @@ services:
       - "traefik.http.routers.app-php.entrypoints=web"
       - "traefik.http.routers.app-php.service=app-php"
       - "traefik.http.services.app-php.loadbalancer.server.port=8080"
-      - "traefik.docker.network=weavenet"        
+      - "traefik.docker.network=weavenet"
     ports:
       - ":8080"
     networks:
