@@ -12,12 +12,6 @@ vms = {
 
 Vagrant.configure('2') do |config|
 
-  config.vm.box_check_update = false
-
-        if !(File.exists?('id_rsa'))
-          system("ssh-keygen -b 2048 -t rsa -f id_rsa -q -N ''")
-       end
-
   vms.each do |name, conf|
     config.vm.define "#{name}" do |k|
       k.vm.box = "#{conf['box']}"
