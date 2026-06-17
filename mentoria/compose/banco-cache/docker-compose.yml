@@ -1,0 +1,42 @@
+services:
+  db-server:
+    image: postgres:16
+    container_name: db-server
+    hostname: db-server
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - type: volume
+        source: pgdata
+        target: /var/lib/postgresql/data
+        volume:
+          nocopy: true
+    networks:
+      network-mentoria:
+        ipv4_address: 192.168.56.120
+    restart: unless-stopped
+
+  redis-server:
+    image: redis:7
+    container_name: redis-server
+    hostname: redis-server
+    volumes:
+    - type: bind
+      source: /opt/mentoria/redis
+      target: /data
+    networks:
+      network-mentoria:
+        ipv4_address: 192.168.56.121
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+    external: true
+
+networks:
+  network-mentoria:
+    external: true

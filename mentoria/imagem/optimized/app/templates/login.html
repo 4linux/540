@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Projeto Mentoria{% endblock %}
+
+{% block content %}
+<section class="hero login-hero">
+    <div class="hero-copy">
+        <div class="badge">Frontend Python Flask</div>
+        <h1>Login do Projeto</h1>
+        <p>
+            Autenticação consultando usuários no PostgreSQL e sessão armazenada no Redis.
+            Ideal para testar réplicas atrás do HAProxy, Traefik e Ingress.
+        </p>
+
+        <div class="info-grid compact">
+            <div class="info-card">
+                <span>PostgreSQL</span>
+                <strong>{{ runtime.db_host }}</strong>
+            </div>
+            <div class="info-card">
+                <span>Redis</span>
+                <strong>{{ runtime.redis_host }}</strong>
+            </div>
+            <div class="info-card">
+                <span>Container</span>
+                <strong>{{ runtime.container_name }}</strong>
+            </div>
+        </div>
+    </div>
+
+    <form class="card login-card" method="post" action="{{ url_for('login') }}">
+        <h2>Acessar painel</h2>
+        <p class="muted">Usuário padrão do laboratório:</p>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" value="{{ default_email }}" autocomplete="username" required>
+
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password" value="{{ default_password }}" autocomplete="current-password" required>
+
+        <button class="btn btn-primary" type="submit">Entrar no Projeto</button>
+
+        <div class="lab-note">
+            <strong>Dica para o LAB:</strong>
+            atualize a página após o login e observe o container que respondeu à requisição.
+        </div>
+    </form>
+</section>
+{% endblock %}

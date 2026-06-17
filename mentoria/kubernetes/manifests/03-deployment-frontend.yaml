@@ -1,0 +1,132 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-frontend
+spec:
+  replicas: 4
+
+  selector:
+    matchLabels:
+      app: app-frontend
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
+  template:
+    metadata:
+      labels:
+        app: app-frontend
+
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - docker-worker1
+                      - docker-worker2
+
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: app-frontend
+
+      containers:
+        - name: app-frontend
+          image: registry:5000/projeto-mentoria:optimized
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+
+          env:
+            - name: DB_HOST
+              value: db-server
+
+            - name: DB_PORT
+              value: "5432"
+
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-projeto
+                  key: postgres_projeto
+
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-projeto
+                  key: postgres_projeto
+
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-password
+                  key: postgres_password
+
+            - name: REDIS_HOST
+              value: redis-server
+
+            - name: REDIS_PORT
+              value: "6379"
+
+            - name: APP_PORT
+              value: "8080"
+
+            - name: WEB_CONCURRENCY
+              value: "4"
+
+            - name: DATA_PATH
+              value: /app/data
+
+          volumeMounts:
+            - name: app-data
+              mountPath: /app/data
+
+          readinessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 6
+
+          livenessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 6
+
+      volumes:
+        - name: app-data
+          persistentVolumeClaim:
+            claimName: pvc-app-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-frontend
+spec:
+  type: ClusterIP
+
+  selector:
+    app: app-frontend
+
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP

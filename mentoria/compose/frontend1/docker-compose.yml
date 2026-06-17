@@ -1,0 +1,37 @@
+services:
+  app-frontend1:
+    image: registry:5000/projeto-mentoria:optimized
+    container_name: app-frontend1
+    hostname: app-frontend1
+
+    env_file:
+      - .env
+
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      CONTAINER_NAME: app-frontend1
+
+    volumes:
+      - type: volume
+        source: frontend-data
+        target: /var/lib/postgresql/data
+
+    networks:
+      network-mentoria:
+        ipv4_address: 192.168.56.122
+
+    restart: unless-stopped
+
+volumes:
+  frontend-data:
+    external: true
+
+networks:
+  network-mentoria:
+    external: true

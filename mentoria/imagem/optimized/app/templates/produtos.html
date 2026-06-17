@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Produtos - Projeto Mentoria{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <div>
+        <div class="badge">CRUD PostgreSQL</div>
+        <h1>Painel de Produtos</h1>
+        <p>Cadastro e listagem persistidos no PostgreSQL.</p>
+    </div>
+    <div class="runtime-mini">
+        <strong>{{ runtime.container_name }}</strong>
+        <span>{{ runtime.container_ip }}</span>
+    </div>
+</section>
+
+<section class="content-grid">
+    <form class="card" method="post" action="{{ url_for('produtos') }}">
+        <h2>Novo Produto</h2>
+
+        <label for="nome">Nome do Produto</label>
+        <input id="nome" name="nome" type="text" placeholder="Ex: Teclado Mecânico" required>
+
+        <label for="preco">Preço (R$)</label>
+        <input id="preco" name="preco" type="text" inputmode="decimal" placeholder="Ex: 249.90" required>
+
+        <button class="btn btn-primary" type="submit">Cadastrar no Banco</button>
+    </form>
+
+    <section class="card table-card">
+        <h2>Produtos Cadastrados</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for produto in produtos %}
+                    <tr>
+                        <td>#{{ produto[0] }}</td>
+                        <td>{{ produto[1] }}</td>
+                        <td class="money">R$ {{ "%.2f"|format(produto[2])|replace('.', ',') }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="3" class="empty">Nenhum produto cadastrado.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+{% endblock %}

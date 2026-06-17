@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-pgdata
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-lvm
+  volumeName: pv-pgdata
+  resources:
+    requests:
+      storage: 2Gi

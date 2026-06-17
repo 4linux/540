@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Projeto Mentoria{% endblock %}
+
+{% block content %}
+<section class="hero dashboard-hero">
+    <div>
+        <div class="badge">Pós-login</div>
+        <h1>Painel do Projeto</h1>
+        <p>
+            Usuário autenticado, sessão no Redis e acesso gravado no PostgreSQL.
+            Este painel ajuda a visualizar qual réplica respondeu à requisição.
+        </p>
+    </div>
+    <div class="user-pill">
+        <span>Usuário logado</span>
+        <strong>{{ current_user.email }}</strong>
+    </div>
+</section>
+
+<section class="metrics-grid">
+    <div class="metric-card primary-card">
+        <span>Container atual</span>
+        <strong>{{ runtime.container_name }}</strong>
+        <small>Hostname: {{ runtime.hostname }}</small>
+    </div>
+
+    <div class="metric-card">
+        <span>IP do container</span>
+        <strong>{{ runtime.container_ip }}</strong>
+        <small>Mostrado pela aplicação Flask</small>
+    </div>
+
+    <div class="metric-card">
+        <span>Acessos no Redis</span>
+        <strong>{{ redis_total }}</strong>
+        <small>Cache/contador compartilhado</small>
+    </div>
+
+    <div class="metric-card">
+        <span>Acessos no PostgreSQL</span>
+        <strong>{{ postgres_total }}</strong>
+        <small>Persistência em banco</small>
+    </div>
+
+    <div class="metric-card">
+        <span>Sessões no Redis</span>
+        <strong>{{ total_sessoes }}</strong>
+        <small>Sessão textual do login</small>
+    </div>
+
+    <div class="metric-card">
+        <span>Produtos</span>
+        <strong>{{ total_produtos }}</strong>
+        <small>Cadastrados no PostgreSQL</small>
+    </div>
+
+    <div class="metric-card">
+        <span>Volume remoto do Frontend</span>
+        {% if volume_ok %}
+            <strong class="ok">OK</strong>
+            <small>{{ volume_info }}</small>
+        {% else %}
+            <strong class="fail">Erro</strong>
+            <small>{{ volume_info }}</small>
+        {% endif %}
+    </div>
+</section>
+
+<section class="panel two-columns">
+    <div>
+        <h2>Arquitetura demonstrada</h2>
+        <p>
+            A aplicação Python Flask conversa com PostgreSQL para autenticação e produtos,
+            usa Redis para sessão/cache e grava um pequeno log no volume remoto montado em
+            <code>{{ runtime.data_path }}</code>.
+        </p>
+        <a class="btn btn-primary" href="{{ url_for('produtos') }}">Gerenciar Produtos</a>
+    </div>
+
+    <div class="stack-box">
+        <div>HAProxy / Traefik / Ingress</div>
+        <span>↓</span>
+        <div>Frontend Python Flask</div>
+        <span>↓</span>
+        <div>PostgreSQL + Redis + Volume Remoto</div>
+    </div>
+</section>
+{% endblock %}

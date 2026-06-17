@@ -1,0 +1,145 @@
+services:
+  traefik:
+    image: "traefik:2.8"
+    command:
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --providers.docker=true
+      - --providers.docker.swarmMode=true
+      - --providers.docker.exposedbydefault=false
+      - --api.insecure=true
+      - --log.level=ERROR
+    ports:
+      - "8080:8080"
+      - "80:80"
+      - "443:443"
+    networks:
+      - swarm-mentoria
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+        
+  db-server:
+    image: postgres:16
+    hostname: db-server
+
+    environment:
+      POSTGRES_DB_FILE: /run/configs/postgres_projeto
+      POSTGRES_USER_FILE: /run/configs/postgres_projeto
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+
+    configs:
+      - source: postgres_projeto
+        target: /run/configs/postgres_projeto
+
+    secrets:
+      - postgres_password
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+    networks:
+      - swarm-mentoria
+
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == docker-manager
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+
+  redis-server:
+    image: redis:7
+    hostname: redis-server
+
+    volumes:
+      - type: bind
+        source: /opt/mentoria/redis
+        target: /data
+
+    networks:
+      - swarm-mentoria
+
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == docker-manager
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+
+  app-frontend:
+    image: registry:5000/projeto-mentoria:optimized
+
+    environment:
+      DB_HOST: db-server
+      DB_PORT: 5432
+      DB_NAME: projeto
+      DB_USER: projeto
+      DB_PASSWORD_FILE: /run/secrets/postgres_password
+
+      REDIS_HOST: redis-server
+      REDIS_PORT: 6379
+      
+      APP_PORT: 8080
+      WEB_CONCURRENCY: 4
+      DATA_PATH: /app/data
+
+    secrets:
+      - postgres_password
+
+    volumes:
+      - type: volume
+        source: frontend-data
+        target: /app/data
+
+    networks:
+      - swarm-mentoria
+
+    deploy:
+      mode: replicated
+      replicas: 4
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      placement:
+        constraints:
+          - node.role == worker
+      labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app-frontend.rule=Host(`projeto-mentoria-192-168-56-110.nip.io`)"
+      - "traefik.http.routers.app-frontend.entrypoints=web"
+      - "traefik.http.routers.app-frontend.service=app-frontend"
+      - "traefik.http.services.app-frontend.loadbalancer.server.port=8080"
+      - "traefik.docker.network=swarm-mentoria"
+
+configs:
+  postgres_projeto:
+    external: true
+
+secrets:
+  postgres_password:
+    external: true
+
+volumes:
+  pgdata:
+    external: true
+
+  frontend-data:
+    external: true
+
+networks:
+  swarm-mentoria:
+    external: true

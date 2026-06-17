@@ -1,0 +1,38 @@
+controller:
+  replicaCount: 1
+
+  hostNetwork: false
+  dnsPolicy: ClusterFirst
+
+  hostPort:
+    enabled: true
+    ports:
+      http: 80
+      https: 8443
+
+  service:
+    enabled: false
+
+  publishService:
+    enabled: false
+
+  extraArgs:
+    publish-status-address: "192.168.56.110"
+
+  ingressClassResource:
+    name: nginx
+    enabled: true
+    default: true
+
+  ingressClass: nginx
+  watchIngressWithoutClass: true
+
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                  - docker-manager
