@@ -20,7 +20,7 @@ services:
     volumes:
       - type: volume
         source: frontend-data
-        target: /var/lib/postgresql/data
+        target: /app/data
 
     networks:
       network-mentoria:
