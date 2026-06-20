@@ -21,5 +21,5 @@ spec:
 
   nfs:
     server: 192.168.56.103
-    path: /appdata
+    path: /srv/frontend-data
     readOnly: false
